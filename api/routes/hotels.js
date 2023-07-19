@@ -1,5 +1,4 @@
 import express from 'express';
-import Hotel from '../models/Hotel.js';
 import { createHotel, deleteHotel, getHotel, getHotels, updateHotel } from '../controllers/hotel.js';
 import { createError } from '../utils/error.js';
 
