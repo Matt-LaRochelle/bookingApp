@@ -2,6 +2,12 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 
+// because we are using import and "type": "module" in package.json file -
+// we must include the file extension in the import route.
+import authRoute from './routes/auth.js';
+
+
+
 const app = express()
 dotenv.config()
 
@@ -21,9 +27,9 @@ mongoose.connection.on("connected", ()=>{
     console.log("mongoDB connected!")
 })
 
-app.get("/", (req, res)=>{
-    res.send("hello first request!")
-})
+// middlewares
+app.use('/api/auth', authRoute);
+
 
 app.listen(8800, () => {
     connect()
