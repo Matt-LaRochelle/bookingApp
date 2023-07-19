@@ -5,6 +5,9 @@ import mongoose from 'mongoose'
 // because we are using import and "type": "module" in package.json file -
 // we must include the file extension in the import route.
 import authRoute from './routes/auth.js';
+import hotelsRoute from './routes/hotels.js';
+import roomsRoute from './routes/rooms.js';
+import usersRoute from './routes/users.js';
 
 
 
@@ -29,6 +32,9 @@ mongoose.connection.on("connected", ()=>{
 
 // middlewares
 app.use('/api/auth', authRoute);
+app.use('/api/users', usersRoute);
+app.use('/api/hotels', hotelsRoute);
+app.use('/api/rooms', roomsRoute);
 
 
 app.listen(8800, () => {
