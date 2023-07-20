@@ -5,16 +5,16 @@ import { createError } from '../utils/error.js';
 const router = express.Router();
 
 // CREATE
-router.post("/", createHotel)
+router.post("/", createHotel);
 
 //UPDATE
-router.put("/:id", updateHotel)
+router.put("/:id", updateHotel);
 
 //DELETE
-router.delete("/:id", deleteHotel)
+router.delete("/:id", deleteHotel);
 
 //GET
-router.get("/:id", getHotel)
+router.get("/:id", getHotel);
 
 //GET ALL
 router.get("/", getHotels);
