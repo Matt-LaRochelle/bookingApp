@@ -48,8 +48,8 @@ app.use((err, req, res, next)=> {
         status: errorStatus,
         message: errorMessage,
         stack: err.stack,
-    })
-})
+    });
+});
 
 
 app.listen(8800, () => {
