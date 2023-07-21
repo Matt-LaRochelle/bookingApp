@@ -1,7 +1,6 @@
 import "./featured.css";
 
 const Featured = () => {
-  // Changing something
   return (
     <div className="featured">
       <div className="featuredItem">
