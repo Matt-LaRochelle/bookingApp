@@ -18,6 +18,9 @@ const useFetch = (url) => {
             setLoading(false);
         };
         fetchData();
+        // If you take away the URL then the useFetch hook uploads only when called
+        // With the URL in the dependancy array, it gets called automatically as the URL
+        // updates.
     }, [url]);
 
     const reFetch = async () => {
