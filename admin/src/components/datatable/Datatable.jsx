@@ -17,6 +17,7 @@ const Datatable = ({columns}) => {
 
   useEffect(()=>{
     setList(data)
+    console.log("data:", data)
   }, [data])
 
   const handleDelete = async (id) => {
